@@ -65,7 +65,9 @@ a:hover {
         width: min-content;
         font-size: 12px !important;
     }
-
+    .short__url {
+        font-size: 12px !important;
+    }
     .shortener__input input {
         font-size: 12px;
         width: 90%;

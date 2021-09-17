@@ -23,7 +23,7 @@
         <div class="row justify-content-center">
             <div class="col-10 my-5 shortener__container bg-dark" align="center">
                 @if (isset($redirect_url))
-                    <h3 style="padding: 73px 0 73px 0;">
+                    <h3 style="padding: 73px 0 73px 0;" class="short__url">
                         URL encurtada: 
                         <a href="{{url('/').'/'.$redirect_url}}">
                             {{url('/').'/'.$redirect_url}}
