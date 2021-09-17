@@ -117,7 +117,7 @@
           <h3 style="padding: 73px 0 73px 0;" class="short__url">
             URL encurtada:
             <a href="{{ url('/') . '/' . $redirect_url }}">
-              {{ "tuqurl.xyz/$redirect_url" }}
+              {{ "www.tuqurl.xyz/$redirect_url" }}
             </a>
           </h3>
         @else
