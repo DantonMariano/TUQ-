@@ -125,7 +125,7 @@
           <form class="form-inline shortener__form" action="{{ url('/short/insert') }}" method="POST">
             {{ csrf_field() }}
             <div class="input-group mb-3 shortener__input">
-              <input type="url" class="form-control" placeholder="URL" aria-label="URL que você quer encurtar" aria-describedby="basic-addon2" name="urltoshort">
+              <input type="text" class="form-control" placeholder="URL" aria-label="URL que você quer encurtar" aria-describedby="basic-addon2" name="urltoshort">
               <div class="input-group-append">
                 <button class="btn btn-secondary" type="submit" style="font-size: 20px; font-weight: 700;">Encurta!</button>
               </div>
