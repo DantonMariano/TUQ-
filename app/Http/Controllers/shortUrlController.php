@@ -12,6 +12,10 @@ class shortUrlController extends Controller
 
         $url = strtolower($request->urltoshort);
         
+        $protocol = array("http://","https://");
+        
+        $url = str_replace($protocol, "", $url);
+        
         $exists = shortUrlModel::where('original_url', '=', $url)->exists();
 
         if ($exists) {
