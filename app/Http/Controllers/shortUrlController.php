@@ -10,7 +10,7 @@ class shortUrlController extends Controller
 {
     public function insertUrl (Request $request) {
 
-        $url = $request->urltoshort;
+        $url = strtolower($request->urltoshort);
         
         $exists = shortUrlModel::where('original_url', '=', $url)->exists();
 
