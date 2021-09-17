@@ -21,7 +21,7 @@ html, body {
     padding: 0;
 }
 .shortener__container {
-    height: 600px;
+    height: min-content;
     color: #fff;
     border-radius: 20px;
     box-shadow: 0 3px 30px rgba(255,255,255,0.4);
@@ -29,6 +29,8 @@ html, body {
 .shortener__form {
     margin-top: 70px;
     font-size: 20px;
+    height: 100%;
+    padding: 0 0 90px 0;
 }
 .shortener__input input {
     font-size: 25px;
@@ -56,4 +58,16 @@ a:hover {
     color:#fff; 
     text-decoration:none; 
     cursor:pointer;  
+}
+
+@media screen and (max-width:768px) {
+    .shortener__input button {
+        width: min-content;
+        font-size: 12px !important;
+    }
+
+    .shortener__input input {
+        font-size: 12px;
+        width: 90%;
+    }
 }
