@@ -22,7 +22,7 @@ class shortUrlController extends Controller
         
         $uri = $new_url[1];
         
-        $url = $domain_name.$uri;
+        $url = "$domain_name/$uri";
         
         $exists = shortUrlModel::where('original_url', '=', $url)->exists();
 
