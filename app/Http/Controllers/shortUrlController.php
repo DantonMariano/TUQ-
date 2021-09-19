@@ -10,11 +10,19 @@ class shortUrlController extends Controller
 {
     public function insertUrl (Request $request) {
 
-        $url = strtolower($request->urltoshort);
+        $url = $request->urltoshort;
         
         $protocol = array("http://","https://");
         
         $url = str_replace($protocol, "", $url);
+        
+        $new_url = explode('/', $url, 2);
+        
+        $domain_name = strtolower($new_url[0]);
+        
+        $uri = $new_url[1];
+        
+        $url = $domain_name.$uri;
         
         $exists = shortUrlModel::where('original_url', '=', $url)->exists();
 
