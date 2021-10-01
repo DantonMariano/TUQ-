@@ -51,7 +51,6 @@ export default function App() {
                 >
                   URL encurtada: <a href={shortUrl}>{shortUrl}</a>
                 </h3>
-                <button onClick={() => {navigator.clipboard.writeText(shortUrl)}} className="btn btn-outline-secondary mx-2"> Copiar para Clipboard</button>
                 <button onClick={() => {setShortUrl(false)}} className="btn btn-outline-secondary mx-2" > Encurtar novamente! </button>
                 </>
               )}
