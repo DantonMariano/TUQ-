@@ -101,40 +101,8 @@
 </head>
 
 <body style="background-color: black">
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <a href="{{ url('/') }}">
-          TUQ! URL
-        </a>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-10 my-5 shortener__container bg-dark" align="center">
-        @if (isset($redirect_url))
-          <h3 style="padding: 73px 0 73px 0;" class="short__url">
-            URL encurtada:
-            <a href="{{ url('/') . '/' . $redirect_url }}">
-              {{ "www.tuqurl.xyz/$redirect_url" }}
-            </a>
-          </h3>
-        @else
-          <h2 style="margin-top: 11%; width:50%">O primeiro e ultimo encurtador de URL's que você vai precisar!</h2>
-          <form class="form-inline shortener__form" action="{{ url('/short/insert') }}" method="POST">
-            {{ csrf_field() }}
-            <div class="input-group mb-3 shortener__input">
-              <input type="text" class="form-control" placeholder="URL" aria-label="URL que você quer encurtar" aria-describedby="basic-addon2" name="urltoshort">
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="submit" style="font-size: 20px; font-weight: 700;">Encurta!</button>
-              </div>
-            </div>
-          </form>
-        @endif
-      </div>
-    </div>
-  </div>
+    <div id="app"></div>
+    <script src="{{mix('js/app.js')}}"></script>
 </body>
 
 </html>
