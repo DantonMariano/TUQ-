@@ -106,7 +106,7 @@
 
   </style>
   <link rel="stylesheet" href="{{ url('/styles.css') }}">
-  <title>Encurta!</title>
+  <title>TUQ Url Shortener</title>
 </head>
 
 <body style="background-color: black">
